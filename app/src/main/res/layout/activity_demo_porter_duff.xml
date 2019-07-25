@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:padding="16dp"
+				tools:context=".show.MainActivity" >
+
+	<ImageView
+			android:id="@+id/image"
+			android:background="@android:drawable/edit_text"
+			android:src="@mipmap/ic_launcher"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentTop="true"/>
+
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/image"
+	>
+		<RadioGroup
+				android:id="@+id/radioGroup1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical" >
+			<RadioButton
+					android:id="@+id/radio0"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					android:text="Src" />
+			<RadioButton
+					android:id="@+id/radio1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Dst" />
+			<RadioButton
+					android:id="@+id/radio2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="SrcOver" />
+			<RadioButton
+					android:id="@+id/radio3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="DstOver" />
+			<RadioButton
+					android:id="@+id/radio4"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="SrcIn" />
+			<RadioButton
+					android:id="@+id/radio5"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="DstIn" />
+			<RadioButton
+					android:id="@+id/radio6"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="SrcOut" />
+			<RadioButton
+					android:id="@+id/radio7"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="DstOut" />
+			<RadioButton
+					android:id="@+id/radio8"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="SrcATop" />
+			<RadioButton
+					android:id="@+id/radio9"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="DstATop" />
+			<RadioButton
+					android:id="@+id/radio10"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Xor" />
+			<RadioButton
+					android:id="@+id/radio11"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Darken" />
+			<RadioButton
+					android:id="@+id/radio12"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Lighten" />
+			<RadioButton
+					android:id="@+id/radio13"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Multiply" />
+			<RadioButton
+					android:id="@+id/radio14"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Screen" />
+			<RadioButton
+					android:id="@+id/radio15"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Clear" />
+		</RadioGroup>
+	</ScrollView>
+</RelativeLayout>

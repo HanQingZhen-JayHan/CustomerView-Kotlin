@@ -1,0 +1,40 @@
+<resources>
+	<declare-styleable name="CirclePercentView">
+		<attr name="backgroundColour" format="color"/>
+		<attr name="textSize" format="dimension"/>
+		<attr name="indicateWidth" format="dimension"/>
+		<attr name="indicateColor" format="color"/>
+	</declare-styleable>
+
+	<declare-styleable name="LineChartView">
+		<attr name="titleSize" format="dimension"/>
+		<attr name="titleColor" format="color"/>
+		<attr name="title" format="string"/>
+
+		<attr name="dotRadius" format="dimension"/>
+		<attr name="dotColor" format="color"/>
+
+		<attr name="lineWith" format="dimension"/>
+		<attr name="lineColor" format="color"/>
+
+		<attr name="axisTextSize" format="dimension"/>
+		<attr name="axisTextColor" format="color"/>
+
+	</declare-styleable>
+
+	<declare-styleable name="PopupView">
+		<attr name="popupColor" format="color"/>
+		<attr name="popupTriangleWidth" format="dimension"/>
+		<attr name="popupTrianglHeight" format="dimension"/>
+	</declare-styleable>
+
+	<declare-styleable name="WaveView">
+		<attr name="waveColor" format="color"/>
+		<attr name="waveRadius" format="dimension"/>
+	</declare-styleable>
+
+	<declare-styleable name="PanelView">
+		<attr name="panelColor" format="color"/>
+		<attr name="panelCoreRadius" format="dimension"/>
+	</declare-styleable>
+</resources>
