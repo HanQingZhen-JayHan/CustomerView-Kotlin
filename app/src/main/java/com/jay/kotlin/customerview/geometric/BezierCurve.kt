@@ -20,8 +20,8 @@ class BezierCurve @JvmOverloads constructor(
 
     private var path: Path
 
-    private var assistanceX:Float
-    private var assistanceY:Float
+    private var assistanceX: Float
+    private var assistanceY: Float
 
     init {
         paint = Paint(Paint.ANTI_ALIAS_FLAG)
@@ -92,15 +92,15 @@ class BezierCurve @JvmOverloads constructor(
         //assistance point ,and end point
         path.quadTo(assistanceX, assistanceY, cx + 200, cy)
 
-        canvas?.drawCircle(assistanceX,assistanceY,5f,paint)
-        canvas?.drawPath(path,paint)
+        canvas?.drawCircle(assistanceX, assistanceY, 5f, paint)
+        canvas?.drawPath(path, paint)
 
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
 
-        when(event?.action){
-            MotionEvent.ACTION_MOVE ->{
+        when (event?.action) {
+            MotionEvent.ACTION_MOVE -> {
                 assistanceX = event.x
                 assistanceY = event.y
                 invalidate()

@@ -1,8 +1,10 @@
 package com.jay.kotlin.customerview.customer
 
 import android.content.Context
-import android.graphics.*
-import android.os.Build
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.Path
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
@@ -121,13 +123,13 @@ class BezierCurveCircleView @JvmOverloads constructor(
                 path.close()
                 canvas?.drawPath(path, paint)
                 canvas?.drawCircle(cx, cy + distance, radius, paint)
-            }else{
+            } else {
                 r = 0f
                 canvas?.drawCircle(cx, cy + maxDistance, radius, paint)
             }
         }
         Log.d("beizer curve", "distance: $distance, r:$r")
-        if(r>1) {
+        if (r > 1) {
             canvas?.drawCircle(cx, cy, r, paint)
         }
 
@@ -161,8 +163,8 @@ class BezierCurveCircleView @JvmOverloads constructor(
 
     }
 
-    fun reset(){
-        cy = viewHeight/4
+    fun reset() {
+        cy = viewHeight / 4
         invalidate()
     }
 

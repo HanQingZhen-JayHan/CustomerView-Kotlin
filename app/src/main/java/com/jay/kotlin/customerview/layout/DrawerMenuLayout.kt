@@ -31,7 +31,7 @@ class DrawerMenuLayout @JvmOverloads constructor(
             for (index in 1 until childCount) {
                 val childView = getChildAt(index)
                 val translate = TranslateAnimation((-childView.measuredWidth).toFloat(), 0f, 0f, 0f)
-                translate.duration = duration +index*200
+                translate.duration = duration + index * 200
                 translate.fillAfter = true
                 childView.visibility = View.VISIBLE
                 childView.startAnimation(translate)
@@ -40,7 +40,7 @@ class DrawerMenuLayout @JvmOverloads constructor(
             for (index in 1 until childCount) {
                 val childView = getChildAt(index)
                 val translate = TranslateAnimation(0f, (-childView.measuredWidth).toFloat(), 0f, 0f)
-                translate.duration = duration+index*200
+                translate.duration = duration + index * 200
 //                translate.setAnimationListener(object : Animation.AnimationListener {
 //                    override fun onAnimationRepeat(animation: Animation?) {
 //                    }

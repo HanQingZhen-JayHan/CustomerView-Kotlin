@@ -121,7 +121,7 @@ class ErrorView @JvmOverloads constructor(
             canvas?.rotate(-45f, cx, cy)
         }
 
-        Log.d("errorView","circleProgress:$circleProgress, leftProgress:$leftProgress, rightProgress:$rightProgress ")
+        Log.d("errorView", "circleProgress:$circleProgress, leftProgress:$leftProgress, rightProgress:$rightProgress ")
         if (circleProgress < 100) {
             circleProgress += 5
 

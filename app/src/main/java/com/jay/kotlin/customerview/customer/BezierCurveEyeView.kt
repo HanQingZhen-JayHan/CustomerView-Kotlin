@@ -5,7 +5,6 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.LinearInterpolator
 import androidx.core.animation.doOnEnd
 import androidx.core.animation.doOnStart
@@ -111,14 +110,14 @@ class BezierCurveEyeView @JvmOverloads constructor(
 
         paint.color = Color.WHITE
 
-        paint.alpha = (process*255/100).toInt()
+        paint.alpha = (process * 255 / 100).toInt()
 
-        if(process<=33){
+        if (process <= 33) {
 
             paint.strokeWidth = eyeStrokeWidth * process / 33
             canvas?.drawArc(rectEyeBall, 180f, 10f, false, paint)
             canvas?.drawArc(rectEyeBall, 205f, 25f, false, paint)
-        }else{
+        } else {
             paint.strokeWidth = eyeStrokeWidth
             canvas?.drawArc(rectEyeBall, 180f, 10f, false, paint)
             canvas?.drawArc(rectEyeBall, 205f, 25f, false, paint)

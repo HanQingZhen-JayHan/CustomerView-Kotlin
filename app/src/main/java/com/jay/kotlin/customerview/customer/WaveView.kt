@@ -84,7 +84,7 @@ class WaveView @JvmOverloads constructor(
 
         paint.color = waveColor
         val adjustWidth = viewWidth - waveRadius
-        canvas?.drawRect(waveRadius-1f, 0f, adjustWidth+1f, viewHeight, paint)
+        canvas?.drawRect(waveRadius - 1f, 0f, adjustWidth + 1f, viewHeight, paint)
 
         var h = 0f
         while (h < viewHeight) {

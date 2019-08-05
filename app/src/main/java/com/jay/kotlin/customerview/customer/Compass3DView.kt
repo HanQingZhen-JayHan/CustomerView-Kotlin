@@ -6,7 +6,6 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import androidx.annotation.ColorRes
 import com.jay.kotlin.customerview.utils.ScreenUtils
 
 class Compass3DView @JvmOverloads constructor(
@@ -141,7 +140,7 @@ class Compass3DView @JvmOverloads constructor(
         rotateCanvas(canvas)
         paint.style = Paint.Style.FILL
         paint.color = Color.WHITE
-        canvas?.drawText("N", cx-35f, cy - radius - 30f, paint);
+        canvas?.drawText("N", cx - 35f, cy - radius - 30f, paint);
 
         drawScale(canvas)
         drawCircle(canvas)

@@ -17,8 +17,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         fab.setOnClickListener { view ->
-            startActivity(Intent(
-                this, Xfermodes::class.java)
+            startActivity(
+                Intent(
+                    this, Xfermodes::class.java
+                )
             )
         }
     }
@@ -35,20 +37,26 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.action_basic -> {
-                startActivity(Intent(
-                    this, GeometricActivity::class.java)
+                startActivity(
+                    Intent(
+                        this, GeometricActivity::class.java
+                    )
                 )
                 return true
             }
             R.id.action_percent -> {
-                startActivity(Intent(
-                    this, CircleViewActivity::class.java)
+                startActivity(
+                    Intent(
+                        this, CircleViewActivity::class.java
+                    )
                 )
                 return true
             }
             R.id.action_test -> {
-                startActivity(Intent(
-                    this, GeometricActivity::class.java)
+                startActivity(
+                    Intent(
+                        this, GeometricActivity::class.java
+                    )
                 )
                 return true
             }

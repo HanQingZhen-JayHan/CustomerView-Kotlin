@@ -6,7 +6,10 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.*
+import android.view.animation.AlphaAnimation
+import android.view.animation.AnimationSet
+import android.view.animation.RotateAnimation
+import android.view.animation.TranslateAnimation
 import androidx.core.view.get
 
 class ArcMenuLayout @JvmOverloads constructor(
@@ -39,22 +42,22 @@ class ArcMenuLayout @JvmOverloads constructor(
         if (isShow) {
             for (index in 1 until childCount) {
                 val childView = getChildAt(index)
-                val a = angle*index* Math.PI / 180
-                val x = -Math.cos(a)*radius
-                val y = -Math.sin(a)*radius
+                val a = angle * index * Math.PI / 180
+                val x = -Math.cos(a) * radius
+                val y = -Math.sin(a) * radius
 
-                Log.d("ArcMenu","angle:$a, x:$x, y:$y")
+                Log.d("ArcMenu", "angle:$a, x:$x, y:$y")
 
                 val animationDuration = duration + index * 100
                 val translate = TranslateAnimation(0f, x.toFloat(), 0f, y.toFloat())
                 translate.duration = animationDuration
                 translate.fillAfter = true
 
-                val rotate = RotateAnimation(0f,360f)
+                val rotate = RotateAnimation(0f, 360f)
                 rotate.duration = animationDuration
                 rotate.fillAfter = true
 
-                val alphaAnimation = AlphaAnimation(0f,255f)
+                val alphaAnimation = AlphaAnimation(0f, 255f)
                 alphaAnimation.duration = animationDuration
                 alphaAnimation.fillAfter = true
 
@@ -70,10 +73,10 @@ class ArcMenuLayout @JvmOverloads constructor(
         } else {
             for (index in 1 until childCount) {
                 val childView = getChildAt(index)
-                val a = angle*index* Math.PI / 180
-                val x = -Math.cos(a)*radius
-                val y = -Math.sin(a)*radius
-                val translate = TranslateAnimation(x.toFloat(),0f, y.toFloat(), 0f)
+                val a = angle * index * Math.PI / 180
+                val x = -Math.cos(a) * radius
+                val y = -Math.sin(a) * radius
+                val translate = TranslateAnimation(x.toFloat(), 0f, y.toFloat(), 0f)
                 translate.duration = duration + index * 100
 
                 childView.startAnimation(translate)
