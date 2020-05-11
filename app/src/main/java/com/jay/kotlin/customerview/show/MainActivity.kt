@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        toolbar.title = getString(R.string.app_name)
         fab.setOnClickListener { view ->
             startActivity(
                 Intent(
