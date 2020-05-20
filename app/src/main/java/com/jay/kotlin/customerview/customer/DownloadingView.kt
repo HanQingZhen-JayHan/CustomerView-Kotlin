@@ -11,7 +11,7 @@ import android.view.animation.Animation
 import com.jay.kotlin.customerview.Animation.ShakeAnimation
 import com.jay.kotlin.customerview.utils.ScreenUtils
 
-class DownloadsView @JvmOverloads constructor(
+class DownloadingView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
     private var viewWidth: Float
@@ -106,7 +106,7 @@ class DownloadsView @JvmOverloads constructor(
         val cy = viewHeight / 2
         radius = viewWidth / 2 - strokeWidth
         if (isShowDrawingCirlce) {
-            paint.color = Color.WHITE
+            paint.color = Color.parseColor("#33b5e5")
             canvas?.drawArc(
                 cx - radius,
                 cy - radius,
@@ -136,7 +136,7 @@ class DownloadsView @JvmOverloads constructor(
             canvas?.drawCircle(cx, cy, radius, paint)
         }
 
-        paint.color = Color.WHITE
+        paint.color = Color.parseColor("#33b5e5")
         if (isShowDrawingLine) {
 
 

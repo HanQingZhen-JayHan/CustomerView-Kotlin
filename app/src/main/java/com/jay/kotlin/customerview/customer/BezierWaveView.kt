@@ -1,6 +1,7 @@
 package com.jay.kotlin.customerview.customer
 
 import android.animation.ValueAnimator
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
@@ -126,18 +127,19 @@ class BezierWaveView @JvmOverloads constructor(
         return bm
     }
 
+    @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
 
-        if (percent > 0 && percent < 100) {
+        if (percent in 1..99) {
 
             val circleBitmap = makeDst(radius)
-            paint.setXfermode(null)
+            paint.xfermode = null
             canvas?.drawBitmap(circleBitmap, cx - radius, cy - radius, paint)
 
             val waveBitmap = makeSrc(radius, percent, moveX - cx + radius)
-            paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP))
+            paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP)
             canvas?.drawBitmap(waveBitmap, cx - radius, cy - radius, paint)
         } else {
 

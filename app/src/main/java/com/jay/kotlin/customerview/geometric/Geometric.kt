@@ -5,7 +5,7 @@ import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 
-class GeometricView @JvmOverloads constructor(
+class Geometric @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
@@ -51,7 +51,7 @@ class GeometricView @JvmOverloads constructor(
         canvas?.drawCircle(500f, 900f, 150f, paint)
 
         //draw arc
-        val rectForArc = RectF(100f, 1100f, 500f, 1400f)
+        val rectForArc = RectF(100f, 1150f, 500f, 1450f)
         paint.strokeWidth = 64f
         canvas?.drawArc(rectForArc, 270f, 90f, false, paint)
 
@@ -59,7 +59,7 @@ class GeometricView @JvmOverloads constructor(
         val text = "Hello Canvas"
         paint.style = Paint.Style.FILL
         paint.textSize = 64f
-        canvas?.drawText(text, 100f, 1300f, paint)
+        canvas?.drawText(text, 300f, 1450f, paint)
 
     }
 

@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.View
 
 
-class PorterDuffXferModeView @JvmOverloads constructor(
+class PorterDuffXferMode @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
     private var bgPaint: Paint
@@ -140,13 +140,13 @@ class PorterDuffXferModeView @JvmOverloads constructor(
 
         var sc: Int = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null) as Int
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_OVER))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
 
         //2.1===========================================================================================================
@@ -155,69 +155,69 @@ class PorterDuffXferModeView @JvmOverloads constructor(
         anchorY += h
         anchorY += divider
         anchorX = 0f
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "DstOver", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.DST_OVER))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
         //2.2===========================================================================================================
         //draw source in
         anchorX += w
         anchorX += boarder
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "SrcIn", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_IN))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
         //2.3===========================================================================================================
         //draw dstIn
         anchorX += w
         anchorX += boarder
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "DstIn", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.DST_IN))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
         //2.4===========================================================================================================
         //draw source
         anchorX += w
         anchorX += boarder
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "SrcOut", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_OUT))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
 
         //level3
@@ -226,52 +226,52 @@ class PorterDuffXferModeView @JvmOverloads constructor(
         anchorY += h
         anchorY += divider
         anchorX = 0f
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "DstOut", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.DST_OUT))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
         //3.2===========================================================================================================
         //draw source
         anchorX += w
         anchorX += boarder
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "SrcATop", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
         //3.3===========================================================================================================
         //draw source
         anchorX += w
         anchorX += boarder
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "DstATop", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.DST_ATOP))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
         //3.4===========================================================================================================
         //draw source
         anchorX += w
@@ -279,15 +279,15 @@ class PorterDuffXferModeView @JvmOverloads constructor(
         canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "Xor", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.XOR))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
         //level 4
         //4.1===========================================================================================================
@@ -295,75 +295,75 @@ class PorterDuffXferModeView @JvmOverloads constructor(
         anchorY += divider
         anchorX = 0f
         //draw source
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "Darken", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.DARKEN))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
         //4.2===========================================================================================================
         //draw source
         anchorX += w
         anchorX += boarder
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "Lighten", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.LIGHTEN))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
         //4.3===========================================================================================================
         //draw source
         anchorX += w
         anchorX += boarder
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "Multiply", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.MULTIPLY))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
         //4.4===========================================================================================================
         //draw source
         anchorX += w
         anchorX += boarder
-        canvas?.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
+        canvas.drawRect(anchorX, anchorY, anchorX + w, anchorY + h, bgPaint)
         drawText(canvas, "Screen", textPaint, anchorX, anchorY + h, w)
 
-        sc = canvas?.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
+        sc = canvas.saveLayer(anchorX, anchorY, anchorX + w, anchorY + h, null)
         //destination
-        canvas?.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(dstBitmap, anchorX, anchorY, objPaint)
 
         objPaint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SCREEN))
         //source
-        canvas?.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
+        canvas.drawBitmap(srcBitmap, anchorX, anchorY, objPaint)
         objPaint.setXfermode(null)
-        canvas?.restoreToCount(sc)
+        canvas.restoreToCount(sc)
 
 
     }
 
-    private fun drawText(canvas: Canvas?, text: String, paint: Paint?, x: Float, y: Float, w: Int) {
+    private fun drawText(canvas: Canvas?, text: String, paint: Paint, x: Float, y: Float, w: Int) {
         val bounds = Rect()
-        paint?.getTextBounds(text, 0, text.length, bounds)
+        paint.getTextBounds(text, 0, text.length, bounds)
         canvas?.drawText(text, x + (w - bounds.width()) / 2, 20f + bounds.height() + y, paint)
     }
 

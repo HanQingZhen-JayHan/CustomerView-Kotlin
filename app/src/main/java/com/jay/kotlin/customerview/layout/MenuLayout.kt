@@ -12,6 +12,8 @@ import android.view.animation.RotateAnimation
 import android.view.animation.TranslateAnimation
 import androidx.core.view.get
 import com.jay.kotlin.customerview.utils.ScreenUtils
+import kotlin.math.cos
+import kotlin.math.sin
 
 class MenuLayout @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -45,7 +47,7 @@ class MenuLayout @JvmOverloads constructor(
         val margin = ScreenUtils.dp2px(context, 20f).toInt()
         val itemWidth = ((measuredWidth - 4 * margin) / 2).toInt()
         val itemHeight = ScreenUtils.dp2px(context, 45f).toInt()
-
+        val angle = 180.0 / childCount
         if (isShow) {
 
             var anchorX = margin
@@ -96,8 +98,8 @@ class MenuLayout @JvmOverloads constructor(
             for (index in 1 until childCount) {
                 val childView = getChildAt(index)
                 val a = angle * index * Math.PI / 180
-                val x = -Math.cos(a) * radius
-                val y = -Math.sin(a) * radius
+                val x = -cos(a) * radius
+                val y = -sin(a) * radius
                 val translate = TranslateAnimation(x.toFloat(), 0f, y.toFloat(), 0f)
                 translate.duration = duration + index * 100
 

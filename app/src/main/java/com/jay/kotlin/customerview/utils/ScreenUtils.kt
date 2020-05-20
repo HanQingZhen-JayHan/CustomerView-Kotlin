@@ -14,7 +14,8 @@ object ScreenUtils {
      */
     val screenWidth: Int
         get() {
-            val windowManager = MyApp.appContext?.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+            val windowManager =
+                MyApp.appContext?.getSystemService(Context.WINDOW_SERVICE) as WindowManager
             val dm = DisplayMetrics()
             windowManager.defaultDisplay.getMetrics(dm)
             return dm.widthPixels
@@ -27,7 +28,8 @@ object ScreenUtils {
      */
     val screenHeight: Int
         get() {
-            val windowManager = MyApp.appContext?.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+            val windowManager =
+                MyApp.appContext?.getSystemService(Context.WINDOW_SERVICE) as WindowManager
             val dm = DisplayMetrics()
             windowManager.defaultDisplay.getMetrics(dm)
             return dm.heightPixels
@@ -41,9 +43,9 @@ object ScreenUtils {
      * @return
      */
 
-    fun sp2px(context: Context, spValue: Int?): Float {
-        val fontScale = context.resources.displayMetrics.density
-        return spValue!! * fontScale + 0.5f
+    fun sp2px(context: Context?, spValue: Int): Float {
+        val scale = context?.resources?.displayMetrics?.density ?: 0f
+        return spValue * scale + 0.5f
     }
 
     /**
@@ -53,8 +55,8 @@ object ScreenUtils {
      * @return
      */
 
-    fun px2dp(context: Context, pxValue: Float): Float {
-        val scale = context.resources.displayMetrics.density
+    fun px2dp(context: Context?, pxValue: Float): Float {
+        val scale = context?.resources?.displayMetrics?.density ?: 0f
         return pxValue / scale + 0.5f
     }
 
@@ -64,8 +66,8 @@ object ScreenUtils {
      * @param dpValue dp
      * @return px
      */
-    fun dp2px(context: Context, dpValue: Float): Float {
-        val scale = context.resources.displayMetrics.density
+    fun dp2px(context: Context?, dpValue: Float): Float {
+        val scale = context?.resources?.displayMetrics?.density ?: 0f
         return dpValue * scale + 0.5f
     }
 }

@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+	<color name="colorPrimary">#008577</color>
+	<color name="colorPrimaryDark">#00574B</color>
+	<color name="colorAccent">#D81B60</color>
 
-    <color name="black">#000</color>
-    <color name="darkRed">#702216</color>
-    <color name="lightGray">#323232</color>
-    <color name="deepGray">#8B8B8B</color>
-    <color name="white">#fff</color>
-    <color name="red">#f00</color>
-    <color name="ocbg">#237EAD</color>
+	<color name="black">#000</color>
+	<color name="darkRed">#702216</color>
+	<color name="lightGray">#323232</color>
+	<color name="deepGray">#8B8B8B</color>
+	<color name="white">#fff</color>
+	<color name="red">#f00</color>
+	<color name="ocbg">#237EAD</color>
+
+	<!--    basic -->
+	<color name="foregroundColor">@color/white</color>
+	<color name="backgroundColor">#ededed</color>
+
+	<color name="separator">#cccccc</color>
+
+    <color name="textPrimeColor">#222222</color>
+    <color name="textSecondaryColor">#505860</color>
+    <color name="textTertiary">#737373</color>
+
+	<!--press color-->
+	<color name="pressColor">#f2f2f2</color>
 
 </resources>

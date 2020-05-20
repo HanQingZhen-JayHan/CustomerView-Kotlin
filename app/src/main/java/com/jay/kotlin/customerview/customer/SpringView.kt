@@ -167,10 +167,14 @@ class SpringView @JvmOverloads constructor(
 
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             val drawable = c.getDrawable(resId)
-            val bitmap = Bitmap.createBitmap(drawable.intrinsicWidth, drawable.intrinsicHeight, Bitmap.Config.ARGB_8888)
+            val bitmap = Bitmap.createBitmap(
+                drawable?.intrinsicWidth ?: 0,
+                drawable?.intrinsicHeight?:0,
+                Bitmap.Config.ARGB_8888
+            )
             val canvas = Canvas(bitmap)
-            drawable.setBounds(0, 0, canvas.width, canvas.height)
-            drawable.draw(canvas)
+            drawable?.setBounds(0, 0, canvas.width, canvas.height)
+            drawable?.draw(canvas)
             return bitmap
         } else {
             return BitmapFactory.decodeResource(c.resources, resId)

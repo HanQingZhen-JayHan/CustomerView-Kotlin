@@ -171,7 +171,7 @@ class Compass3DView @JvmOverloads constructor(
         return true
     }
 
-    fun handleRotateDegree(event: MotionEvent) {
+    private fun handleRotateDegree(event: MotionEvent) {
         val dx = (event.x - cx) / viewWidth
         val dy = (event.y - cy) / viewWidth
         var percentX = dx
@@ -191,7 +191,7 @@ class Compass3DView @JvmOverloads constructor(
         rotateY = percentX * MAX_ROTATE_DEGREE
     }
 
-    fun rotateCanvas(canvas: Canvas?) {
+    private fun rotateCanvas(canvas: Canvas?) {
         mMatrix.reset()
         camera.save()
 
@@ -204,7 +204,7 @@ class Compass3DView @JvmOverloads constructor(
         canvas?.concat(mMatrix)
     }
 
-    fun drawScale(canvas: Canvas?) {
+    private fun drawScale(canvas: Canvas?) {
         canvas?.save()
         paint.style = Paint.Style.FILL
         paint.color = Color.WHITE
@@ -233,7 +233,7 @@ class Compass3DView @JvmOverloads constructor(
         path.lineTo(cx + width, cy);
         path.close();
         canvas?.drawPath(path, paint);
-        paint.setColor(Color.parseColor("#55227BAE"));
+        paint.color = Color.parseColor("#55227BAE");
         canvas?.drawCircle(cx, cy, centerBallRadius, paint);
     }
 }

@@ -58,10 +58,6 @@ class CouponGameLayout @JvmOverloads constructor(
         originalX = 0f
         originalY = 0f
 
-        val btn = Button(context)
-        btn.text = "hello btn"
-        addView(btn)
-
     }
 
 

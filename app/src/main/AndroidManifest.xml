@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		  package="com.jay.kotlin.customerview">
+		package="com.jay.kotlin.customerview">
 
 	<application
 			android:allowBackup="false"
@@ -8,23 +8,37 @@
 			android:label="@string/app_name"
 			android:roundIcon="@mipmap/ic_launcher_round"
 			android:supportsRtl="true"
+			android:name=".app.MyApp"
 			android:theme="@style/AppTheme">
-
 		<activity
-				android:name=".show.MainActivity"
-				android:label="@string/app_name"
-				android:theme="@style/AppTheme.NoActionBar">
+				android:name=".MainActivity"
+				android:label="@string/app_name">
 			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-				<category android:name="android.intent.category.LAUNCHER"/>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity android:name=".demo.PorterDuffActivity"/>
-		<activity android:name=".demo.Xfermodes"/>
-		<activity android:name=".ShowLayoutActivity"/>
-		<activity android:name=".show.GeometricActivity"/>
-		<activity android:name=".show.CircleViewActivity"/>
-		<activity android:name=".show.LineCharViewActivity"/>
+
+		<activity android:name=".show.GeometricActivity" />
+		<activity android:name=".show.CircleViewActivity" />
+		<activity android:name=".show.LineCharViewActivity" />
+		<activity android:name=".show.PopViewActivity" />
+		<activity android:name=".show.ArcMenuLayoutActivity" />
+		<activity android:name=".show.BezierCurveActivity" />
+		<activity android:name=".show.BezierCurveCircleViewActivity" />
+		<activity android:name=".show.BezierCurveEyeViewActivity" />
+		<activity android:name=".show.BezierWaveViewActivity" />
+		<activity android:name=".show.CirclePercentViewActivity" />
+		<activity android:name=".show.Compass3DViewActivity" />
+		<activity android:name=".show.CouponGameLayoutActivity" />
+		<activity android:name=".show.DownloadingViewActivity" />
+		<activity android:name=".show.DrawerMenuLayoutActivity" />
+		<activity android:name=".show.ErrorViewActivity" />
+		<activity android:name=".show.HexagonViewActivity" />
+		<activity android:name=".show.PanelViewActivity" />
+		<activity android:name=".show.SpringViewActivity" />
+		<activity android:name=".show.WaveViewActivity" />
+		<activity android:name=".show.PorterDuffXferModeActivity" />
 
 	</application>
 

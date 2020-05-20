@@ -222,12 +222,12 @@ class LineChartView @JvmOverloads constructor(
     }
 
 
-    private fun drawText(canvas: Canvas?, text: String, paint: Paint?, x: Float, y: Float, w: Int) {
+    private fun drawText(canvas: Canvas?, text: String, paint: Paint, x: Float, y: Float, w: Int) {
         if (TextUtils.isEmpty(text)) {
             return
         }
         val bounds = Rect()
-        paint?.getTextBounds(text, 0, text.length, bounds)
+        paint.getTextBounds(text, 0, text.length, bounds)
         //draw base line
         canvas?.drawText(text, x + (w - bounds.width()) / 2, bounds.height() + y, paint)
         //val boundsWidth = bounds.width()

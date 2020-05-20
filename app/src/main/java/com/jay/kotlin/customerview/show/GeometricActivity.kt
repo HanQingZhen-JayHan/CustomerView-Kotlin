@@ -1,19 +1,12 @@
 package com.jay.kotlin.customerview.show
 
-import android.os.Bundle
-import android.widget.FrameLayout
-import androidx.appcompat.app.AppCompatActivity
-import com.jay.kotlin.customerview.geometric.GeometricView
+import android.view.View
+import com.jay.kotlin.customerview.geometric.Geometric
 
-class GeometricActivity : AppCompatActivity() {
+class GeometricActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        var container = FrameLayout(this)
-        setContentView(container)
-
-        // test
-        var view = GeometricView(this)
-        container.addView(view)
+    override fun showCustomerView(): View {
+        subPackage = "geometric" //for source link
+        return Geometric(this)
     }
 }

@@ -1,6 +1,8 @@
 <resources>
 	<string name="app_name">CustomerView</string>
-	<string name="action_basic">Basic Geometric</string>
-	<string name="action_circle_percent">Circle Percent</string>
-	<string name="action_test">Test</string>
+	<string name="action_link">Source code</string>
+
+	<string name="title_home">Home</string>
+	<string name="title_dashboard">More</string>
+
 </resources>
