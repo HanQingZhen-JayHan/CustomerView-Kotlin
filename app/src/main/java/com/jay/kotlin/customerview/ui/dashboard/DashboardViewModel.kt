@@ -95,7 +95,7 @@ class DashboardViewModel : ViewModel() {
             )
             list.add(
                 ItemEntity(
-                    LineCharViewActivity::class.java,
+                    LineChartViewActivity::class.java,
                     R.drawable.ic_launcher_background,
                     "Line Chart View",
                     "test"
@@ -111,7 +111,7 @@ class DashboardViewModel : ViewModel() {
             )
             list.add(
                 ItemEntity(
-                    PopViewActivity::class.java,
+                    PopupViewActivity::class.java,
                     R.drawable.ic_launcher_background,
                     "Popup View",
                     "test"

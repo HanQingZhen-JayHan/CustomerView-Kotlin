@@ -21,8 +21,8 @@
 
 		<activity android:name=".show.GeometricActivity" />
 		<activity android:name=".show.CircleViewActivity" />
-		<activity android:name=".show.LineCharViewActivity" />
-		<activity android:name=".show.PopViewActivity" />
+		<activity android:name=".show.LineChartViewActivity" />
+		<activity android:name=".show.PopupViewActivity" />
 		<activity android:name=".show.ArcMenuLayoutActivity" />
 		<activity android:name=".show.BezierCurveActivity" />
 		<activity android:name=".show.BezierCurveCircleViewActivity" />

@@ -7,7 +7,7 @@ import com.jay.kotlin.customerview.customer.LineChartView
 import com.jay.kotlin.customerview.utils.ScreenUtils
 import kotlin.random.Random
 
-class LineCharViewActivity : BaseActivity() {
+class LineChartViewActivity : BaseActivity() {
 
     override fun showCustomerView(): View {
         val view = LineChartView(this)
