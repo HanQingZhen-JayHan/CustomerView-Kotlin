@@ -17,8 +17,6 @@ abstract class BaseActivity : AppCompatActivity() {
 
     private val className = this.javaClass.simpleName
     private lateinit var contentView: FrameLayout
-    private var sourceCodeLink =
-        "https://github.com/HanQingZhen-JayHan/CustomerView-Kotlin/blob/master/app/src/main/java/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,11 +58,13 @@ abstract class BaseActivity : AppCompatActivity() {
         return container
     }
 
+    //create action bar menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
+    //item click
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.action_link -> {
             showSourceCode()
@@ -77,7 +77,10 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+    //browser
     var subPackage = "customer"
+    private var sourceCodeLink =
+        "https://github.com/HanQingZhen-JayHan/CustomerView-Kotlin/blob/master/app/src/main/java/"
     private fun showSourceCode() {
         val packageName = this.packageName.replace('.', '/')
         val fileName = className.replace("Activity", "")
@@ -90,7 +93,6 @@ abstract class BaseActivity : AppCompatActivity() {
         if (browserIntent.resolveActivity(this.packageManager) != null) {
             startActivity(browserIntent)
         }
-
     }
 
     // customer view
