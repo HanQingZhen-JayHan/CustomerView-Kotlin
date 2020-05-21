@@ -125,7 +125,7 @@ class SpringView @JvmOverloads constructor(
         canvas?.drawCircle(0.2f * viewWidth, cy, 7f, paint)
         canvas?.drawCircle(0.8f * viewWidth, cy, 7f, paint)
 
-        var picY: Float
+        val picY: Float
         if (isDoingAnimation) {
             picY = (actionY - cy) * (cy + assistanceY) * 0.5f / (assistanceY - cy) - pic.height
         } else {
@@ -165,20 +165,16 @@ class SpringView @JvmOverloads constructor(
 
     fun getBitmapFromDrawable(c: Context, resId: Int): Bitmap {
 
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-            val drawable = c.getDrawable(resId)
-            val bitmap = Bitmap.createBitmap(
-                drawable?.intrinsicWidth ?: 0,
-                drawable?.intrinsicHeight?:0,
-                Bitmap.Config.ARGB_8888
-            )
-            val canvas = Canvas(bitmap)
-            drawable?.setBounds(0, 0, canvas.width, canvas.height)
-            drawable?.draw(canvas)
-            return bitmap
-        } else {
-            return BitmapFactory.decodeResource(c.resources, resId)
-        }
+        val drawable = c.getDrawable(resId)
+        val bitmap = Bitmap.createBitmap(
+            drawable?.intrinsicWidth ?: 0,
+            drawable?.intrinsicHeight?:0,
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        drawable?.setBounds(0, 0, canvas.width, canvas.height)
+        drawable?.draw(canvas)
+        return bitmap
 
     }
 

@@ -32,7 +32,7 @@ class DashboardFragment : BaseFragment(), ItemAdapter.ClickListener {
             rv = it.findViewById(R.id.rv)
             rv.adapter = ItemAdapter(vewModel.data, this)
             rv.layoutManager = GridLayoutManager(context, 2)
-            //rv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+
             val myDivider = GridLayoutDecoration(ScreenUtils.dp2px(context, 10f).toInt())
             rv.addItemDecoration(myDivider)
         }

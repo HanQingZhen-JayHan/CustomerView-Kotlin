@@ -1,41 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_width="match_parent"
-		android:orientation="vertical"
-		xmlns:tools="http://schemas.android.com/tools"
-		android:background="@drawable/item_click_selector"
-		android:elevation="5dp"
-		android:paddingBottom="8dp"
-		android:layout_height="wrap_content">
+<layout xmlns:tools="http://schemas.android.com/tools"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto">
 
-	<ImageView
-			android:id="@+id/logo"
+	<data>
+
+		<variable
+				name="item"
+				type="com.jay.kotlin.customerview.ui.adapter.ItemEntity" />
+	</data>
+
+	<LinearLayout
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:scaleType="fitCenter"
-			android:adjustViewBounds="true"
-			android:src="@color/colorPrimaryDark" />
+			android:orientation="vertical"
+			android:background="@drawable/item_click_selector"
+			android:elevation="5dp"
+			android:paddingBottom="8dp"
+			android:layout_height="wrap_content">
 
-	<View
-			android:layout_width="match_parent"
-			android:layout_height="1dp"
-			android:background="@drawable/shape_line" />
+		<ImageView
+				android:id="@+id/logo"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:scaleType="fitCenter"
+				android:adjustViewBounds="true"
+				app:placeholder="@{@drawable/kotlin_animation}"
+				app:rawUrl="@{item.image}"/>
 
-	<TextView
-			android:id="@+id/title"
-			style="@style/styleTitle"
-			tools:text="title"
-			android:layout_marginTop="6dp"
-			android:layout_gravity="center_horizontal"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content" />
+		<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@drawable/shape_line" />
 
-	<TextView
-			android:id="@+id/description"
-			android:layout_gravity="center_horizontal"
-			style="@style/styleDescription"
-			tools:text="des"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content" />
+		<TextView
+				android:id="@+id/title"
+				style="@style/styleTitle"
+				tools:text="title"
+				android:text="@{item.title}"
+				android:layout_marginTop="6dp"
+				android:layout_gravity="center_horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
 
-</LinearLayout>
+		<TextView
+				android:id="@+id/description"
+				android:layout_gravity="center_horizontal"
+				style="@style/styleDescription"
+				tools:text="des"
+				android:text="@{item.description}"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+
+	</LinearLayout>
+
+</layout>

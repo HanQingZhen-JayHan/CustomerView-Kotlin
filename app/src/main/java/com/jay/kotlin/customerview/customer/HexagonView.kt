@@ -115,7 +115,7 @@ class HexagonView @JvmOverloads constructor(
         var cy = paddingY + radius
         var cx = 0f
 
-        for (h in 0..(rowCount - 1)) {
+        for (h in 0 until rowCount) {
             val isEven: Boolean = (h % 2) == 0
             if (isEven) {
                 cx = paddingX + halfSqrt3Radius

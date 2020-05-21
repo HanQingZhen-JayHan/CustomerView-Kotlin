@@ -21,41 +21,41 @@ class DashboardViewModel : ViewModel() {
             list.add(
                 ItemEntity(
                     BezierCurveActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.bezier_curve,
                     "Bezier Curve",
-                    "test"
+                    "Three points curve"
                 )
             )
             list.add(
                 ItemEntity(
                     BezierCurveCircleViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.bezier_curve_circle_view,
                     "Bezier Curve Circle View",
-                    "test"
+                    "Bezier curve + circle"
                 )
             )
             list.add(
                 ItemEntity(
                     BezierCurveEyeViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.bezier_curve_eye_view,
                     "Bezier Curve Eye View",
-                    "test"
+                    "Bezier curve + circle"
                 )
             )
             list.add(
                 ItemEntity(
                     BezierWaveViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.bezier_wave_view,
                     "Bezier Wave View",
-                    "test"
+                    "Bezier curve + circle"
                 )
             )
             list.add(
                 ItemEntity(
                     CirclePercentViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.circle_percent_view,
                     "Circle Percent View",
-                    "test"
+                    "Circle + arc"
                 )
             )
 
@@ -63,100 +63,100 @@ class DashboardViewModel : ViewModel() {
             list.add(
                 ItemEntity(
                     Compass3DViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.compass_3d_view,
                     "Compass 3D View",
-                    "test"
+                    "Circle + touch event"
                 )
             )
             list.add(
                 ItemEntity(
                     DownloadingViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.downloading_view,
                     "Downloading View",
-                    "test"
+                    "Circle + line + arc"
                 )
             )
             list.add(
                 ItemEntity(
                     ErrorViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.error_view,
                     "Error View",
-                    "test"
+                    "Arc + line + translate"
                 )
             )
 
             list.add(
                 ItemEntity(
                     HexagonViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.drawable.hexagon,
                     "Hexagon View",
-                    "test"
+                    "Path + coordinates"
                 )
             )
             list.add(
                 ItemEntity(
                     LineChartViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.line_chart_view,
                     "Line Chart View",
-                    "test"
+                    "Path + coordinates"
                 )
             )
             list.add(
                 ItemEntity(
                     PanelViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.panel_view,
                     "Panel View",
-                    "test"
+                    "Arc + interpolator + text"
                 )
             )
             list.add(
                 ItemEntity(
                     PopupViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.drawable.popup,
                     "Popup View",
-                    "test"
+                    "Path"
                 )
             )
 
             list.add(
                 ItemEntity(
                     SpringViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.spring_view,
                     "Spring View",
-                    "test"
+                    "Touch event + path"
                 )
             )
             list.add(
                 ItemEntity(
                     WaveViewActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.drawable.wave,
                     "Wave View",
-                    "test"
+                    "Arc + rect"
                 )
             )
 
             list.add(
                 ItemEntity(
                     ArcMenuLayoutActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.arc_menu_layout,
                     "Arc Menu Layout",
-                    "test"
+                    "Layout + rotate + translate"
                 )
             )
             list.add(
                 ItemEntity(
                     CouponGameLayoutActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.coupon_game_layout,
                     "Coupon Game Layout",
-                    "test"
+                    "Layout + touch event"
                 )
             )
             list.add(
                 ItemEntity(
                     DrawerMenuLayoutActivity::class.java,
-                    R.drawable.ic_launcher_background,
+                    R.raw.drawer_menu_layout,
                     "Drawer Menu Layout",
-                    "test"
+                    "Layout + translate"
                 )
             )
             return list

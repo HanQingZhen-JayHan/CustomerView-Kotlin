@@ -1,23 +1,18 @@
 package com.jay.kotlin.customerview.ui.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.kotlin.customerview.R
+import com.jay.kotlin.customerview.databinding.ItemViewBinding
 
-class ItemAdapter constructor(dataList: List<ItemEntity>?, clickListener: ClickListener?) :
+class ItemAdapter constructor(dataList: List<ItemEntity>?, clickListener: ClickListener) :
     RecyclerView.Adapter<ItemAdapter.MyViewHolder>() {
 
     var data = dataList
     var listener = clickListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val root = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_view, parent, false)
-        return MyViewHolder(root, listener)
+        return MyViewHolder.create(LayoutInflater.from(parent.context), parent, listener)
     }
 
     override fun getItemCount(): Int {
@@ -25,28 +20,34 @@ class ItemAdapter constructor(dataList: List<ItemEntity>?, clickListener: ClickL
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bindData(data?.get(position))
+        holder.onBind(data?.get(position))
     }
 
-    class MyViewHolder(itemView: View, listener: ClickListener?) :
-        RecyclerView.ViewHolder(itemView) {
-        init {
-            itemView.setOnClickListener {
-                listener?.onClick(item)
+    class MyViewHolder private constructor(
+        private val binding: ItemViewBinding,
+        callback: ClickListener
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+        companion object {
+            fun create(
+                inflater: LayoutInflater,
+                parent: ViewGroup,
+                callback: ClickListener
+            ): MyViewHolder {
+                val itemBinding = ItemViewBinding.inflate(inflater, parent, false)
+                return MyViewHolder(itemBinding, callback)
             }
         }
 
-        fun bindData(item: ItemEntity?) {
-            this.item = item
-            image.setImageResource(item?.image ?: 0)
-            title.text = item?.title
-            description.text = item?.description
+        init {
+            binding.root.setOnClickListener { v ->
+                callback.onClick(binding.item)
+            }
         }
 
-        var item: ItemEntity? = null
-        val image: ImageView = itemView.findViewById(R.id.logo)
-        val title: TextView = itemView.findViewById(R.id.title)
-        val description: TextView = itemView.findViewById(R.id.description)
+        fun onBind(item: ItemEntity?) {
+            binding.item = item
+        }
     }
 
     interface ClickListener {
