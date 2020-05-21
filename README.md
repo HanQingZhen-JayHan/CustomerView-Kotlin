@@ -36,7 +36,7 @@ It includes:
 
 1. [PorterDuffxfermode](./app/src/main/java/com/jay/kotlin/customerview/geometric/PorterDuffXferMode.kt)
 
-<img src="./porter_duffxfermode.png" style="zoom:40%;" />
+<img src="./porter_duffxfermode.png"/>
 
 
 
@@ -46,7 +46,7 @@ It includes:
 
 2. [Geometric View](./app/src/main/java/com/jay/kotlin/customerview/geometric/Geometric.kt)
 
-<img src="./app/src/main/res/drawable-xhdpi/geometric.png" style="zoom:50%;" />
+<img src="./app/src/main/res/drawable-xhdpi/geometric.png" />
 
 > **Highlights:**
 >
@@ -197,7 +197,7 @@ It includes:
 
 11. [Hexagon View](./app/src/main/java/com/jay/kotlin/customerview/customer/HexagonView.kt)
 
-<img src="./app/src/main/res/drawable-xhdpi/hexagon.jpg" style="zoom:30%;" />
+<img src="./app/src/main/res/drawable-xhdpi/hexagon.jpg"/>
 
 > **Highlights:**
 >
@@ -243,7 +243,7 @@ It includes:
 
 14. [Popup View](./app/src/main/java/com/jay/kotlin/customerview/customer/PopupView.kt)
 
-<img src="./app/src/main/res/drawable-xhdpi/popup.jpg" style="zoom:30%;" />
+<img src="./app/src/main/res/drawable-xhdpi/popup.jpg"/>
 
 > **Highlights:**
 >
@@ -273,7 +273,7 @@ It includes:
 
 16. [Wave View](./app/src/main/java/com/jay/kotlin/customerview/customer/WaveView.kt)
 
-<img src="./app/src/main/res/drawable-xhdpi/wave.jpg" style="zoom:30%;" />
+<img src="./app/src/main/res/drawable-xhdpi/wave.jpg" />
 
 > **Highlights:**
 >
