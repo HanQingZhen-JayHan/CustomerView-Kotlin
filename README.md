@@ -1,6 +1,33 @@
 # CustomerView-Kotlin
-This library is implemented by kotlin based on AndroidX. 
-There are several examples of customer views which are from: https://www.kancloud.cn/digest/wingscustomview/129806
+This project is implemented by kotlin based on AndroidX and shows you some interesting customer views. 
+
+
+
+**APK[]**
+
+It includes:
+
+1. [PorterDuffxfermode](/app/src/main/java/com/jay/kotlin/customerview/geometric/PorterDuffXferMode.kt)
+2. Geometric View
+3. Bezier Curve
+4. Bezier Curve Circle View
+5. Bezier Curve Eye View
+6. Bezier Wave View
+7. Circle Percent View
+8. Compass 3D View
+9. Downloading View
+10. Error View
+11. Hexagon View
+12. Line Chart View
+13. Panel View
+14. Popup View
+15. Spring View
+16. Wave View
+17. Arc menu Layout
+18. Coupon Game Layout
+19. Drawer Menu Layout
+
+
 
 ## More Details
 
