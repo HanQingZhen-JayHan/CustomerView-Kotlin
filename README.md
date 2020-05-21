@@ -1,9 +1,12 @@
+![Customer View!](/app/src/main/res/drawable/kotlin_animation.jpg "Customer View")
+
 # CustomerView-Kotlin
+
 This project is implemented by kotlin based on AndroidX and shows you some interesting customer views. 
 
 
 
-**APK[]**
+**[APK](/app-debug.apk)**
 
 It includes:
 
