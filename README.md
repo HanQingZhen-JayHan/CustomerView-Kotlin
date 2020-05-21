@@ -1,4 +1,4 @@
-<img src="./app/src/main/ic_launcher-playstore.png" style="zoom:40%;" />
+![](./app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png)
 
 **[APK Download](/app-debug.apk)**
 
