@@ -8,7 +8,9 @@ This project is implemented by kotlin based on AndroidX and shows you some inter
 
 ![](./CustomerView.gif)
 
-It includes:
+
+
+## Content :
 
 1. [PorterDuffxfermode](./app/src/main/java/com/jay/kotlin/customerview/geometric/PorterDuffXferMode.kt)
 2. [Geometric View](./app/src/main/java/com/jay/kotlin/customerview/geometric/Geometric.kt)
@@ -34,7 +36,7 @@ It includes:
 
 ## More Details
 
-1. [PorterDuffxfermode](./app/src/main/java/com/jay/kotlin/customerview/geometric/PorterDuffXferMode.kt)
+#### 1. [PorterDuffxfermode](./app/src/main/java/com/jay/kotlin/customerview/geometric/PorterDuffXferMode.kt)
 
 <img src="./porter_duffxfermode.png"/>
 
@@ -42,9 +44,9 @@ It includes:
 
 
 
----------
+---
 
-2. [Geometric View](./app/src/main/java/com/jay/kotlin/customerview/geometric/Geometric.kt)
+#### 2. [Geometric View](./app/src/main/java/com/jay/kotlin/customerview/geometric/Geometric.kt)
 
 <img src="./app/src/main/res/drawable-xhdpi/geometric.png" />
 
@@ -64,7 +66,7 @@ It includes:
 
 -----
 
-3. [Bezier Curve](./app/src/main/java/com/jay/kotlin/customerview/geometric/BezierCurve.kt)
+#### 3. [Bezier Curve](./app/src/main/java/com/jay/kotlin/customerview/geometric/BezierCurve.kt)
 
 ![](./app/src/main/res/raw/bezier_curve.gif)
 
@@ -77,7 +79,7 @@ It includes:
 
 -----
 
-4. [Bezier Curve Circle View](./app/src/main/java/com/jay/kotlin/customerview/customer/BezierCurveCircleView.kt)
+#### 4. [Bezier Curve Circle View](./app/src/main/java/com/jay/kotlin/customerview/customer/BezierCurveCircleView.kt)
 
 ![](./app/src/main/res/raw/bezier_curve_circle_view.gif)
 
@@ -93,7 +95,7 @@ It includes:
 
 -----
 
-5. [Bezier Curve Eye View](./app/src/main/java/com/jay/kotlin/customerview/customer/BezierCurveEyeView.kt)
+#### 5. [Bezier Curve Eye View](./app/src/main/java/com/jay/kotlin/customerview/customer/BezierCurveEyeView.kt)
 
 ![](./app/src/main/res/raw/bezier_curve_eye_view.gif)
 
@@ -111,7 +113,7 @@ It includes:
 
 -----
 
-6. [Bezier Wave View](./app/src/main/java/com/jay/kotlin/customerview/customer/BezierWaveView.kt)
+#### 6. [Bezier Wave View](./app/src/main/java/com/jay/kotlin/customerview/customer/BezierWaveView.kt)
 
 ![](./app/src/main/res/raw/bezier_wave_view.gif)
 
@@ -127,7 +129,7 @@ It includes:
 
 -----
 
-7. [Circle Percent View](./app/src/main/java/com/jay/kotlin/customerview/customer/CirclePercentView.kt)
+#### 7. [Circle Percent View](./app/src/main/java/com/jay/kotlin/customerview/customer/CirclePercentView.kt)
 
 ![](./app/src/main/res/raw/circle_percent_view.gif)
 
@@ -145,7 +147,7 @@ It includes:
 
 -----
 
-8. [Compass 3D View](./app/src/main/java/com/jay/kotlin/customerview/customer/Compass3DView.kt)
+#### 8. [Compass 3D View](./app/src/main/java/com/jay/kotlin/customerview/customer/Compass3DView.kt)
 
 ![](./app/src/main/res/raw/compass_3d_view.gif)
 
@@ -161,7 +163,7 @@ It includes:
 
 -----
 
-9. [Downloading View](./app/src/main/java/com/jay/kotlin/customerview/customer/DownloadingView.kt)
+#### 9. [Downloading View](./app/src/main/java/com/jay/kotlin/customerview/customer/DownloadingView.kt)
 
 ![](./app/src/main/res/raw/downloading_view.gif)
 
@@ -179,7 +181,7 @@ It includes:
 
 -----
 
-10. [Error View](./app/src/main/java/com/jay/kotlin/customerview/customer/ErrorView.kt)
+#### 10. [Error View](./app/src/main/java/com/jay/kotlin/customerview/customer/ErrorView.kt)
 
 ![](./app/src/main/res/raw/error_view.gif)
 
@@ -195,7 +197,7 @@ It includes:
 
 -----
 
-11. [Hexagon View](./app/src/main/java/com/jay/kotlin/customerview/customer/HexagonView.kt)
+#### 11. [Hexagon View](./app/src/main/java/com/jay/kotlin/customerview/customer/HexagonView.kt)
 
 <img src="./app/src/main/res/drawable-xhdpi/hexagon.jpg"/>
 
@@ -209,7 +211,7 @@ It includes:
 
 -----
 
-12. [Line Chart View](./app/src/main/java/com/jay/kotlin/customerview/customer/LineChartView.kt)
+#### 12. [Line Chart View](./app/src/main/java/com/jay/kotlin/customerview/customer/LineChartView.kt)
 
 ![](./app/src/main/res/raw/line_chart_view.gif)
 
@@ -225,7 +227,7 @@ It includes:
 
 -----
 
-13. [Panel View](./app/src/main/java/com/jay/kotlin/customerview/customer/PanelView.kt)
+#### 13. [Panel View](./app/src/main/java/com/jay/kotlin/customerview/customer/PanelView.kt)
 
 ![](./app/src/main/res/raw/panel_view.gif)
 
@@ -241,7 +243,7 @@ It includes:
 
 -----
 
-14. [Popup View](./app/src/main/java/com/jay/kotlin/customerview/customer/PopupView.kt)
+#### 14. [Popup View](./app/src/main/java/com/jay/kotlin/customerview/customer/PopupView.kt)
 
 <img src="./app/src/main/res/drawable-xhdpi/popup.jpg"/>
 
@@ -255,7 +257,7 @@ It includes:
 
 -----
 
-15. [Spring View](./app/src/main/java/com/jay/kotlin/customerview/customer/SpringView.kt)
+#### 15. [Spring View](./app/src/main/java/com/jay/kotlin/customerview/customer/SpringView.kt)
 
 ![](./app/src/main/res/raw/spring_view.gif)
 
@@ -271,7 +273,7 @@ It includes:
 
 -----
 
-16. [Wave View](./app/src/main/java/com/jay/kotlin/customerview/customer/WaveView.kt)
+#### 16. [Wave View](./app/src/main/java/com/jay/kotlin/customerview/customer/WaveView.kt)
 
 <img src="./app/src/main/res/drawable-xhdpi/wave.jpg" />
 
@@ -285,7 +287,7 @@ It includes:
 
 -----
 
-17. [Arc Menu Layout](./app/src/main/java/com/jay/kotlin/customerview/layout/ArcMenuLayout.kt)
+#### 17. [Arc Menu Layout](./app/src/main/java/com/jay/kotlin/customerview/layout/ArcMenuLayout.kt)
 
 ![](./app/src/main/res/raw/arc_menu_layout.gif)
 
@@ -301,7 +303,7 @@ It includes:
 
 -----
 
-18. [Coupon Game Layout](./app/src/main/java/com/jay/kotlin/customerview/layout/CouponGameLayout.kt)
+#### 18. [Coupon Game Layout](./app/src/main/java/com/jay/kotlin/customerview/layout/CouponGameLayout.kt)
 
 ![](./app/src/main/res/raw/coupon_game_layout.gif)
 
@@ -317,7 +319,7 @@ It includes:
 
 -----
 
-19. [Drawer Menu Layout](./app/src/main/java/com/jay/kotlin/customerview/layout/DrawerMenuLayout.kt)
+#### 19. [Drawer Menu Layout](./app/src/main/java/com/jay/kotlin/customerview/layout/DrawerMenuLayout.kt)
 
 ![](./app/src/main/res/raw/drawer_menu_layout.gif)
 
